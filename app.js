@@ -19,13 +19,13 @@ signInAnonymously
 from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
 
 const firebaseConfig = {
-
-apiKey: "TON_API_KEY",
-
-authDomain: "TON_PROJET.firebaseapp.com",
-
-projectId: "TON_PROJECT_ID"
-
+  apiKey: "AIzaSyDmuX4WWYittDm81AJB30rOqZCs7RsMJf8",
+  authDomain: "midnight-fadd0.firebaseapp.com",
+  projectId: "midnight-fadd0",
+  storageBucket: "midnight-fadd0.firebasestorage.app",
+  messagingSenderId: "810459895136",
+  appId: "1:810459895136:web:6ddf6760b3db4cc648ba05",
+  measurementId: "G-0LBQDDWE21"
 };
 
 const app = initializeApp(firebaseConfig);
