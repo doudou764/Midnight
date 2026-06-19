@@ -1,54 +1,229 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Midnight</title>
 
+<meta name="theme-color" content="#0a0a0a">
+
 <link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-<div id="closed-screen">
-    <div class="closed-box">
-        <h1>🌙 MIDNIGHT</h1>
-        <p>Le chat ouvre à minuit.</p>
-        <p>Disponible de 00h00 à 06h00.</p>
-    </div>
+<!-- ECRAN FERME -->
+
+<section id="closedScreen">
+
+<div class="closed-content">
+
+<div class="moon">🌙</div>
+
+<h1>MIDNIGHT</h1>
+
+<p class="subtitle">
+Quand le monde dort, Midnight s'éveille.
+</p>
+
+<div class="countdown-box">
+
+<div class="countdown-label">
+Temps avant ouverture
 </div>
+
+<div id="countdown">
+00:00:00
+</div>
+
+</div>
+
+<button id="rulesBtn">
+Lire les règles
+</button>
+
+</div>
+
+</section>
+
+<!-- APPLICATION -->
 
 <div id="app">
 
 <header>
 
+<div class="logo-area">
+
 <div class="logo">
-    🌙 MIDNIGHT
+🌙
 </div>
 
-<div id="user">
-    Chargement...
+<div>
+
+<h1>MIDNIGHT</h1>
+
+<span class="status">
+En ligne
+</span>
+
+</div>
+
+</div>
+
+<div class="header-right">
+
+<div class="online-box">
+
+<span class="green-dot"></span>
+
+<span id="onlineCount">
+0 réveillés
+</span>
+
+</div>
+
+<div id="userPseudo">
+Chargement...
+</div>
+
 </div>
 
 </header>
 
-<div id="messages"></div>
+<!-- HERO -->
 
-<div class="chat-box">
+<section class="hero">
+
+<h2>
+Bienvenue dans la nuit
+</h2>
+
+<p>
+Le chat communautaire ouvert uniquement entre minuit et 6h.
+</p>
+
+</section>
+
+<!-- CHAT -->
+
+<section class="chat-section">
+
+<div id="messages">
+
+<div class="system-message">
+🌙 Bienvenue sur Midnight.
+</div>
+
+</div>
+
+<div class="chat-input-container">
 
 <input
 id="messageInput"
-type="text"
+maxlength="300"
 placeholder="Écrire un message..."
-maxlength="300">
+type="text"
+>
 
 <button id="sendBtn">
+
 Envoyer
+
+</button>
+
+</div>
+
+</section>
+
+</div>
+
+<!-- MODAL REGLES -->
+
+<div id="rulesModal" class="modal">
+
+<div class="modal-content">
+
+<h2>Règlement</h2>
+
+<ul>
+
+<li>Respect des autres utilisateurs.</li>
+
+<li>Pas de spam.</li>
+
+<li>Pas de contenu illégal.</li>
+
+<li>Pas de harcèlement.</li>
+
+<li>Les messages peuvent être supprimés.</li>
+
+<li>Le chat ferme à 06h00.</li>
+
+</ul>
+
+<button id="closeModal">
+
+Fermer
+
 </button>
 
 </div>
 
 </div>
+
+<!-- TEMPLATE MESSAGE -->
+
+<template id="messageTemplate">
+
+<div class="message">
+
+<div class="message-top">
+
+<div class="pseudo">
+
+Midnight#0000
+
+</div>
+
+<div class="message-actions">
+
+<button class="report-btn">
+
+🚩
+
+</button>
+
+</div>
+
+</div>
+
+<div class="message-text">
+
+Message
+
+</div>
+
+</div>
+
+</template>
+
+<!-- TEMPLATE SYSTEM -->
+
+<template id="systemTemplate">
+
+<div class="system-message">
+
+Message système
+
+</div>
+
+</template>
 
 <script type="module" src="app.js"></script>
 
