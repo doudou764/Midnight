@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Midnight</title>
 
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="closed-screen">
+    <div class="closed-box">
+        <h1>🌙 MIDNIGHT</h1>
+        <p>Le chat ouvre à minuit.</p>
+        <p>Disponible de 00h00 à 06h00.</p>
+    </div>
+</div>
+
+<div id="app">
+
+<header>
+
+<div class="logo">
+    🌙 MIDNIGHT
+</div>
+
+<div id="user">
+    Chargement...
+</div>
+
+</header>
+
+<div id="messages"></div>
+
+<div class="chat-box">
+
+<input
+id="messageInput"
+type="text"
+placeholder="Écrire un message..."
+maxlength="300">
+
+<button id="sendBtn">
+Envoyer
+</button>
+
+</div>
+
+</div>
+
+<script type="module" src="app.js"></script>
+
+</body>
+</html>
