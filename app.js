@@ -81,6 +81,9 @@ document.getElementById("rulesModal");
 const closeModal =
 document.getElementById("closeModal");
 
+const music =
+document.getElementById("nightMusic");
+
 /* =====================
    MODAL REGLES
 ===================== */
@@ -130,6 +133,11 @@ closedScreen.style.display =
 appScreen.style.display =
 "flex";
 
+if(music){
+music.pause();
+music.currentTime = 0;
+}
+
 }else{
 
 closedScreen.style.display =
@@ -137,6 +145,16 @@ closedScreen.style.display =
 
 appScreen.style.display =
 "none";
+
+if(music){
+
+music.play().catch(()=>{
+console.log(
+"Le navigateur bloque l'autoplay."
+);
+});
+
+}
 
 }
 
