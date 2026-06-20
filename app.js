@@ -84,6 +84,20 @@ document.getElementById("closeModal");
 const music =
 document.getElementById("nightMusic");
 
+document
+.getElementById("testMusicBtn")
+?.addEventListener("click", () => {
+
+    music.play()
+    .then(() => {
+        console.log("Musique lancée");
+    })
+    .catch(err => {
+        console.error(err);
+    });
+
+});
+
 /* =====================
    MODAL REGLES
 ===================== */
